@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.GridPane?>
+
+<?import javafx.scene.control.Button?>
+<GridPane fx:controller="com.example.lab2_tzi.HelloController"
+          alignment="center" hgap="10" vgap="10" xmlns:fx="http://javafx.com/fxml">
+  <padding>
+    <Insets top="20" right="20" bottom="20" left="20"/>
+  </padding>
+
+  <!-- Button to load .txt file -->
+  <Button fx:id="loadButton" text="Завантажити .txt файл" onAction="#handleLoadButtonAction" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+  <Button fx:id="clearButton" text="Очистити поле" onAction="#clearButton" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+  <!-- Text area for input text -->
+  <TextArea fx:id="inputArea" prefHeight="100.0" prefWidth="400.0" GridPane.rowIndex="1" GridPane.columnIndex="0" GridPane.columnSpan="2"/>
+
+  <!-- Label and TextField for shift value -->
+  <Label text="Ключ:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+  <TextField fx:id="keyField" prefWidth="50.0" text="" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+  <!-- Buttons for encrypting and decrypting text -->
+  <Button fx:id="encryptButton" text="Зашифрувати текст" onAction="#encrypt" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+  <Button fx:id="decryptButton" text="Розшифрувати текст" onAction="#decrypt" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+
+  <!-- Label for error messages -->
+
+  <!-- Label and TextArea for output text -->
+  <Label text="Виведення:" GridPane.rowIndex="5" GridPane.columnIndex="0" GridPane.columnSpan="2"/>
+  <TextArea fx:id="outputArea" prefHeight="100.0" prefWidth="400.0" GridPane.rowIndex="6" GridPane.columnIndex="0" GridPane.columnSpan="2"/>
+</GridPane>
